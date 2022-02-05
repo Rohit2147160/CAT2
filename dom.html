@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Parser</title>
+    <style>
+        h1 {
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        button {
+            width: 80px;
+            height: 30px;
+            margin-left: 700px;
+            background-color: #1B98F5;
+            border-radius: 15px;
+        }
+
+        button:hover {
+            background-color: #12B0E8;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var xmlDoc;
+        function loadxmldoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    xmlDoc = this.responseXML;
+                    myFunction();
+                }
+            };
+            xmlhttp.open("GET", "reg.xml", true);
+            xmlhttp.send();
+        }
+        function myFunction(xml) {
+
+            table = "<tr><th>STU-NAME</th><th>STU-UNIVERSITY</th></tr>";
+            x = xmlDoc.getElementsByTagName("COMPUTER_SCIENCE")
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("STU-NAME")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("STU-UNIVERSITY")[0].childNodes[0].nodeValue + "</td></tr>";
+
+
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1><u>COMPUTER SCIENCE</u></h1>
+    <p><button onclick="loadxmldoc()">Refresh</button></p>
+
+    <table align="center" id="demo" border="2">
+        <tr>
+            <th>STU-NAME</th>
+            <th>STU-UNIVERSITY</th>
+        </tr>
+    </table>
+    <br>
+</body>
+
+</html>

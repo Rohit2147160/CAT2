@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CHRIST>
+    <COMPUTER_SCIENCE>
+        <STU-NAME>Rohit Priyadarshi</STU-NAME>
+        <STU-PHONE>6355380271</STU-PHONE>
+        <STU-EMAIL>rohit.priyadarshi@glsfcait.in</STU-EMAIL>
+        <STU-UNIVERSITY>GLS UNIVERSITY</STU-UNIVERSITY>
+    </COMPUTER_SCIENCE>
+    <COMPUTER_SCIENCE>
+        <STU-NAME>Ranjeet</STU-NAME>
+        <STU-PHONE>8884222885</STU-PHONE>
+        <STU-EMAIL>ranjeet@btech.christuniversity.in</STU-EMAIL>
+        <STU-UNIVERSITY>CHRIST UNIVERSITY</STU-UNIVERSITY>
+    </COMPUTER_SCIENCE>
+    <COMPUTER_SCIENCE>
+        <STU-NAME>Deepti</STU-NAME>
+        <STU-PHONE>7892581898</STU-PHONE>
+        <STU-EMAIL>deepti@ba.du.in</STU-EMAIL>
+        <STU-UNIVERSITY>DU</STU-UNIVERSITY>
+    </COMPUTER_SCIENCE>
+</CHRIST>
